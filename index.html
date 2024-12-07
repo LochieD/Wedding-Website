@@ -13,21 +13,22 @@
             background-color: #ffffff; /* White background */
             color: #333;
             text-align: center;
+            overflow-x: hidden;
         }
 
         /* White header with the logo */
         .white-header {
             background-color: #ffffff;
-            padding: 15px 50px;
+            padding: 15px 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
         }
 
         .white-header img {
             height: 60px;
+            margin-bottom: 10px;
         }
 
         .white-header .date {
@@ -87,12 +88,12 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 20px;
         }
 
         .details, .accommodation, .couple-section {
-            margin-bottom: 10px; /* Reduced gap between sections */
-            padding: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
             border-radius: 10px;
             background-color: #ffffff;
             transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
@@ -110,8 +111,8 @@
             width: 12.5%; /* 1/8 the size of image3.jpg */
         }
 
-        .details h2, .accommodation h2, .rsvp h2 {
-            font-size: 2.5em; /* Match the font size */
+        .details h2, .accommodation h2, .couple-section h2 {
+            font-size: 2.5em;
             margin-bottom: 10px;
             font-family: 'EB Garamond', serif;
             text-transform: uppercase;
@@ -141,27 +142,6 @@
             background-color: #4b2e6e;
         }
 
-        .center {
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Smooth scroll effect */
-        .details, .accommodation, .couple-section {
-            animation: fadeInUp 2s forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Contact Us button styling */
         .contact-us {
             display: inline-block;
@@ -188,6 +168,53 @@
             padding: 10px;
             text-align: center;
             position: relative;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .header-container h1 {
+                font-size: 2.5em;
+            }
+
+            .header-container p {
+                font-size: 1.2em;
+            }
+
+            .details h2, .accommodation h2, .couple-section h2 {
+                font-size: 2em;
+            }
+
+            .details p, .accommodation p {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 20px 10px;
+            }
+
+            .white-header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .white-header img {
+                height: 50px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container h1 {
+                font-size: 2em;
+            }
+
+            .header-container p {
+                font-size: 1em;
+            }
+
+            .details h2, .accommodation h2, .couple-section h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
