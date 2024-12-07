@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: 'EB Garamond', serif;
-            background-color: #ffffff;
+            background-color: #ffffff; /* White background */
             color: #333;
             text-align: center;
         }
@@ -28,7 +28,6 @@
 
         .white-header img {
             height: 60px;
-            max-width: 100%; /* Make sure it scales on smaller screens */
         }
 
         .white-header .date {
@@ -92,8 +91,8 @@
         }
 
         .details, .accommodation, .couple-section {
-            margin-bottom: 20px;
-            padding: 20px;
+            margin-bottom: 10px; /* Reduced gap between sections */
+            padding: 10px;
             border-radius: 10px;
             background-color: #ffffff;
             transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
@@ -105,14 +104,16 @@
             width: 100%;
             border-radius: 10px;
             margin: 20px 0;
+            max-width: 100%; /* Ensures images are responsive */
+            height: auto;
         }
 
         .details img.smaller {
-            width: 12.5%; /* Adjusted image size */
+            width: 12.5%; /* 1/8 the size of image3.jpg */
         }
 
-        .details h2, .accommodation h2, .rsvp h2 {
-            font-size: 2.5em;
+        .details h2, .accommodation h2, .couple-section h2 {
+            font-size: 2.5em; /* Match the font size */
             margin-bottom: 10px;
             font-family: 'EB Garamond', serif;
             text-transform: uppercase;
@@ -147,6 +148,22 @@
             justify-content: center;
         }
 
+        /* Smooth scroll effect */
+        .details, .accommodation, .couple-section {
+            animation: fadeInUp 2s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Contact Us button styling */
         .contact-us {
             display: inline-block;
@@ -175,55 +192,46 @@
             position: relative;
         }
 
-        /* Responsive Design */
+        /* Media queries for mobile responsiveness */
         @media (max-width: 768px) {
             .header-container h1 {
-                font-size: 2.5em;
+                font-size: 2.5em; /* Smaller heading on mobile */
             }
 
             .header-container p {
-                font-size: 1.2em;
+                font-size: 1.2em; /* Adjust text size */
             }
 
             .details h2, .accommodation h2, .couple-section h2 {
-                font-size: 2em;
+                font-size: 2em; /* Adjust section headings */
             }
 
             .details p, .accommodation p {
-                font-size: 1em;
+                font-size: 1em; /* Adjust text size */
+            }
+
+            .details img, .couple-section img {
+                width: 100%; /* Ensure images resize */
+                height: auto;
             }
 
             .white-header {
                 flex-direction: column;
-                align-items: center;
-                padding: 15px;
+                padding: 15px 20px; /* Adjust padding */
             }
 
             .white-header img {
-                height: 50px;
+                height: 50px; /* Smaller logo */
             }
 
-            .container {
-                padding: 30px 10px;
+            .rsvp-button {
+                font-size: 1em; /* Adjust button font size */
+                padding: 10px 20px; /* Adjust button padding */
             }
 
-            .details, .accommodation, .couple-section {
-                padding: 15px;
-            }
-
-            .rsvp-button, .contact-us {
-                padding: 10px 20px;
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-container h1 {
-                font-size: 2em;
-            }
-
-            .details img, .couple-section img {
-                width: 100%; /* Ensure images are fully responsive */
+            .contact-us {
+                font-size: 1em; /* Adjust button font size */
+                padding: 10px 20px; /* Adjust button padding */
             }
         }
     </style>
@@ -243,7 +251,10 @@
 
     <!-- Main content -->
     <div class="container">
+        <!-- Added image3.jpg -->
         <img src="image3.jpg" alt="Small image" class="smaller">
+
+        <!-- RSVP button -->
         <div class="center">
             <a href="https://withjoy.com/lachlan-and-imogen/rsvp" class="rsvp-button">Click Here to RSVP</a>
         </div>
@@ -259,7 +270,7 @@
 
         <section class="accommodation">
             <h2>ACCOMMODATION</h2>
-            <p>There are various places for accommodation in Kangaroo Valley, including the <a href="https://www.kangaroovalleygolf.com.au/accommodations/" target="_blank">Kangaroo Valley Golf and Country Retreat</a>, <a href="https://wildes.com.au/" target="_blank">Wildes Boutique Hotel</a>, and a range of <a href="https://www.airbnb.com.au/a/stays/Kangaroo-Valley--New-South-Wales--Australia" target="_blank">AirBnB</a> options.</p>
+            <p>There are various places for accommodation in Kangaroo Valley, including the <a href="https://www.kangaroovalleygolf.com.au/accommodations/" target="_blank">Kangaroo Valley Golf and Country Retreat</a>, <a href="https://wildes.com.au/" target="_blank">Wildes Boutique Hotel</a> and a range of <a href="https://www.airbnb.com.au/a/stays/Kangaroo-Valley--New-South-Wales--Australia?c=.pi0.pk1411078717_58118656000&gclsrc=aw.ds&&c=.pi0.pk1411078717_58118656000&gad_source=1&gclid=CjwKCAiA6aW6BhBqEiwA6KzDc9zn0CM-Q-x0JajUKvbqJCzDqWNVdYF1fmIZgW3Mdf8pvWHht4bXyRoC4qwQAvD_BwE" target="_blank">AirBnB</a> options.</p>
             <p>Plan your stay early to secure your spot!</p>
         </section>
 
