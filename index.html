@@ -18,11 +18,13 @@
         /* White header with the logo */
         .white-header {
             background-color: #ffffff;
-            padding: 15px 50px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .white-header img {
@@ -48,7 +50,7 @@
             align-items: center;
             color: white;
             text-align: center;
-            padding: 0 20px;
+            width: 100%;
         }
 
         .header-container::before {
@@ -95,8 +97,8 @@
             border-radius: 10px;
             background-color: #ffffff;
             transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .details img, .couple-section img {
@@ -182,31 +184,42 @@
 
         /* Mobile-specific styling */
         @media (max-width: 768px) {
-            .header-container {
-                justify-content: flex-end;
-                text-align: center;
+            .white-header {
+                padding: 10px;
+                justify-content: center;
             }
 
             .white-header img {
-                height: 30px;
                 margin-right: auto;
-                margin-left: 10px;
+                height: 40px;
             }
 
             .white-header .date {
-                font-size: 0.9em;
-                text-align: right;
-                white-space: nowrap;
+                font-size: 1em;
+                margin-left: auto;
             }
 
             .header-container {
                 padding: 10px;
-                align-items: center;
+                width: 100%;
+            }
+
+            .header-container h1 {
+                font-size: 2.5em;
+            }
+
+            .header-container p {
+                font-size: 1em;
+            }
+
+            .details, .accommodation, .couple-section {
+                padding: 20px;
+                opacity: 1;
+                transform: translateY(0);
             }
 
             footer {
                 text-align: center;
-                padding: 20px;
             }
         }
     </style>
@@ -245,7 +258,7 @@
 
         <section class="accommodation">
             <h2>ACCOMMODATION</h2>
-            <p>There are various places for accommodation in Kangaroo Valley, including the <a href="https://www.kangaroovalleygolf.com.au/accommodations/" target="_blank">Kangaroo Valley Golf and Country Retreat</a>, <a href="https://wildes.com.au/" target="_blank">Wildes Boutique Hotel</a> and a range of <a href="https://www.airbnb.com.au/a/stays/Kangaroo-Valley--New-South-Wales--Australia?c=.pi0.pk1411078717_58118656000&gclsrc=aw.ds&&c=.pi0.pk1411078717_58118656000&gad_source=1&gclid=CjwKCAiA6aW6BhBqEiwA6KzDc9zn0CM-Q-x0JajUKvbqJCzDqWNVdYF1fmIZgW3Mdf8pvWHht4bXyRoC4qwQAvD_BwE" target="_blank">AirBnB</a> options.</p>
+            <p>There are various places for accommodation in Kangaroo Valley, including the <a href="https://www.kangaroovalleygolf.com.au/accommodations/" target="_blank">Kangaroo Valley Golf and Country Retreat</a>, <a href="https://wildes.com.au/" target="_blank">Wildes Boutique Hotel</a> and a range of <a href="https://www.airbnb.com.au/a/stays/Kangaroo-Valley--New-South-Wales--Australia?c=.pi0.pk1411078717_58118656000&gclsrc=aw.ds&&c=.pi0.pk1411078717_58118656000&gad_source=1&gclid=C
             <p>Plan your stay early to secure your spot!</p>
         </section>
 
