@@ -19,7 +19,7 @@
         /* White header with the logo */
         .white-header {
             background-color: #ffffff;
-            padding: 15px 0; /* Adjust padding to avoid overflow */
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -87,30 +87,24 @@
         /* Main content */
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 800px; /* Center content on all screens */
             margin: 0 auto;
             padding: 50px 20px;
+            box-sizing: border-box;
         }
 
         .details, .accommodation, .couple-section {
-            margin-bottom: 10px;
-            padding: 10px;
+            margin-bottom: 30px;
+            padding: 20px;
             border-radius: 10px;
             background-color: #ffffff;
-            transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
-            opacity: 1;
-            transform: translateY(0);
-            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .details img, .couple-section img {
             width: 100%;
             border-radius: 10px;
             margin: 20px 0;
-        }
-
-        .details img.smaller {
-            width: 12.5%;
         }
 
         .details h2, .accommodation h2, .rsvp h2 {
@@ -123,6 +117,7 @@
         .details p, .accommodation p {
             font-size: 1.2em;
             line-height: 1.6;
+            text-align: left; /* For better readability */
         }
 
         .rsvp-button {
@@ -146,17 +141,6 @@
         .center {
             display: flex;
             justify-content: center;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .contact-us {
@@ -201,11 +185,6 @@
                 margin-left: auto;
             }
 
-            .header-container {
-                padding: 10px;
-                width: 100%;
-            }
-
             .header-container h1 {
                 font-size: 2.5em;
             }
@@ -241,14 +220,6 @@
 
     <!-- Main content -->
     <div class="container">
-        <!-- Added image3.jpg -->
-        <img src="image3.jpg" alt="Small image" class="smaller">
-
-        <!-- RSVP button -->
-        <div class="center">
-            <a href="https://withjoy.com/lachlan-and-imogen/rsvp" class="rsvp-button">Click Here to RSVP</a>
-        </div>
-
         <section class="details">
             <h2>WEDDING DETAILS</h2>
             <p><strong>Date:</strong> Saturday, 13 December 2025</p>
@@ -260,7 +231,7 @@
 
         <section class="accommodation">
             <h2>ACCOMMODATION</h2>
-            <p>There are various places for accommodation in Kangaroo Valley, including the <a href="https://www.kangaroovalleygolf.com.au/accommodations/" target="_blank">Kangaroo Valley Golf and Country Retreat</a>, <a href="https://wildes.com.au/" target="_blank">Wildes Boutique Hotel</a> and a range of <a href="https://www.airbnb.com.au/a/stays/Kangaroo-Valley--New-South-Wales--Australia?c=.pi0.pk1411078717_58118656000&gclsrc=aw.ds&&c=.pi0.pk1411078717_58118656000&gad_source=1&gclid=CjwKCAiA6aW6BhBqEiwA6KzDc9zn0CM-Q-x0JajUKvbqJCzDqWNVdYF1fmIZgW3Mdf8pvWHht4bXyRoC4qwQAvD_BwE" target="_blank">AirBnB</a> options.</p>
+            <p>There are various places for accommodation in Kangaroo Valley, including the <a href="https://www.kangaroovalleygolf.com.au/accommodations/" target="_blank">Kangaroo Valley Golf and Country Retreat</a>, <a href="https://wildes.com.au/" target="_blank">Wildes Boutique Hotel</a>, and a range of <a href="https://www.airbnb.com.au" target="_blank">AirBnB</a> options.</p>
             <p>Plan your stay early to secure your spot!</p>
         </section>
 
@@ -268,15 +239,12 @@
             <h2>WE LOOK FORWARD TO CELEBRATING THIS SPECIAL DAY WITH YOU!</h2>
             <img src="image2.jpg" alt="Couple image">
         </section>
+
+        <div class="center">
+            <a href="mailto:thedrings25@gmail.com" class="contact-us">Contact Us</a>
+        </div>
     </div>
 
-    <!-- Contact Us -->
-    <div class="container">
-        <h2>Contact Us</h2>
-        <a href="mailto:thedrings25@gmail.com" class="contact-us">Email</a>
-    </div>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 All rights reserved.</p>
         <p>&#9835; "If you like it then you should have put a Dring on it" &#9835;</p>
